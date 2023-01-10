@@ -1,6 +1,5 @@
 package com.devinpharmacy.pharmacymanagement.entity;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,14 +16,22 @@ import org.jetbrains.annotations.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class UsuarioEntity {
+public class MedicamentoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull
-    private String email;
+    private String nome_medicamento;
+    @NotNull
+    private String nome_laboratorio;
+    @NotNull
+    private String dosagem_medicamento;
+    @NotNull
+    private String descricao_medicamento;
+    @NotNull
+    private String preco_un_medicamento;
 
     @NotNull
-    private String senha;
+    private String tipo_medicamento;
 }

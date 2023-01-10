@@ -1,8 +1,8 @@
 package com.devinpharmacy.pharmacymanagement.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.devinpharmacy.pharmacymanagement.dto.EnderecoRequest;
+import com.devinpharmacy.pharmacymanagement.dto.EnderecoResponse;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/endereco")
@@ -10,7 +10,33 @@ public class EnderecoController {
 
 
     @GetMapping()
-    public String getEndereco() {
-        return "Testando 1, 2, 3...SOMMMM!!";
+    public EnderecoResponse getEndereco() {
+        return new EnderecoResponse(
+                "90810-000",
+                "Icaraí",
+                "1122",
+                "Cristal",
+                "Porto Alegre",
+                "RS",
+                "Casa",
+                "42512-67162",
+                "38973-90923"
+        );
+    }
+
+    @PostMapping
+    public EnderecoRequest salvaEndereco(@RequestBody EnderecoRequest enderecoRequest) {
+        return new EnderecoRequest(
+                enderecoRequest.getCep(),
+                enderecoRequest.getLogradouro(),
+                enderecoRequest.getNumero(),
+                enderecoRequest.getBairro(),
+                enderecoRequest.getCidade(),
+                enderecoRequest.getEstado(),
+                enderecoRequest.getComplemento(),
+                enderecoRequest.getLatitude(),
+                enderecoRequest.getLongitude()
+        );
+
     }
 }

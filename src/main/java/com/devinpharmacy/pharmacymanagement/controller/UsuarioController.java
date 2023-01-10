@@ -1,15 +1,26 @@
 package com.devinpharmacy.pharmacymanagement.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.devinpharmacy.pharmacymanagement.dto.UsuarioRequest;
+import com.devinpharmacy.pharmacymanagement.dto.UsuarioResponse;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/usuario")
 public class UsuarioController {
 
- @GetMapping()
-    public String getUsuario() {
-        return "Testando 1, 2, 3...SOM!!";
+    @GetMapping()
+    public UsuarioResponse encontraUsuario() {
+        return new UsuarioResponse(
+                "arturlcampos@gmail.com",
+                "1234567890"
+        );
+    }
+
+    @PostMapping
+    public UsuarioRequest salvaUsuario(@RequestBody UsuarioRequest usuarioRequest) {
+        return new UsuarioRequest(
+                usuarioRequest.getEmail(),
+                usuarioRequest.getSenha()
+        );
     }
 }

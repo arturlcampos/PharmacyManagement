@@ -1,4 +1,4 @@
-package com.devinpharmacy.pharmacymanagement.dto;
+package com.devinpharmacy.pharmacymanagement.controller.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

@@ -1,5 +1,4 @@
-package com.devinpharmacy.pharmacymanagement.dto;
-
+package com.devinpharmacy.pharmacymanagement.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

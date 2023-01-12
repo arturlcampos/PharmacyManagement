@@ -1,7 +1,7 @@
 package com.devinpharmacy.pharmacymanagement.controller;
 
-import com.devinpharmacy.pharmacymanagement.dto.EnderecoRequest;
-import com.devinpharmacy.pharmacymanagement.dto.EnderecoResponse;
+import com.devinpharmacy.pharmacymanagement.controller.dto.EnderecoRequest;
+import com.devinpharmacy.pharmacymanagement.controller.dto.EnderecoResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class EnderecoController {
 
 
-    @GetMapping()
+    @GetMapping
     public EnderecoResponse getEndereco() {
         return new EnderecoResponse(
                 "90810-000",

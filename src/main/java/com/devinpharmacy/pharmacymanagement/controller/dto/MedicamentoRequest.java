@@ -1,4 +1,4 @@
-package com.devinpharmacy.pharmacymanagement.dto;
+package com.devinpharmacy.pharmacymanagement.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 
 public class MedicamentoRequest {
-
     private String nome_medicamento;
     private String nome_laboratorio;
     private String dosagem_medicamento;

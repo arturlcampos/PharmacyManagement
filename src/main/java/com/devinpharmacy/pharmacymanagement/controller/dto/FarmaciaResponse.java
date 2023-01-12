@@ -1,4 +1,4 @@
-package com.devinpharmacy.pharmacymanagement.dto;
+package com.devinpharmacy.pharmacymanagement.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,11 +10,11 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class FarmaciaRequest {
+public class FarmaciaResponse {
     private String razaoSocial;
     private String cnpj;
     private String name;
-    private String email;
+    private String  email;
     private String telefone;
     private String celular;
     private String id_endereco;

@@ -1,4 +1,4 @@
-package com.devinpharmacy.pharmacymanagement.dto;
+package com.devinpharmacy.pharmacymanagement.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,10 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 
-
-public class UsuarioRequest {
+public class UsuarioResponse {
     private String email;
     private String senha;
-
-    }
-
+}

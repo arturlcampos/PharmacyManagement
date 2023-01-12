@@ -1,7 +1,7 @@
 package com.devinpharmacy.pharmacymanagement.controller;
 
-import com.devinpharmacy.pharmacymanagement.dto.FarmaciaRequest;
-import com.devinpharmacy.pharmacymanagement.dto.FarmaciaResponse;
+import com.devinpharmacy.pharmacymanagement.controller.dto.FarmaciaRequest;
+import com.devinpharmacy.pharmacymanagement.controller.dto.FarmaciaResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

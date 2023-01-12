@@ -1,4 +1,4 @@
-package com.devinpharmacy.pharmacymanagement.entity;
+package com.devinpharmacy.pharmacymanagement.dataprovider.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.jetbrains.annotations.NotNull;
 
-@Entity
+@Entity (name = "endereco")
 @Getter
 @Setter
 @AllArgsConstructor

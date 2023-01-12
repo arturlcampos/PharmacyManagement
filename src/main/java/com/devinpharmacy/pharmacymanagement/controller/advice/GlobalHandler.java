@@ -1,7 +1,7 @@
 package com.devinpharmacy.pharmacymanagement.controller.advice;
 
 
-import com.devinpharmacy.pharmacymanagement.dto.ErrorResponse;
+import com.devinpharmacy.pharmacymanagement.controller.dto.ErrorResponse;
 import com.devinpharmacy.pharmacymanagement.exception.BadRequestException;
 import com.devinpharmacy.pharmacymanagement.exception.NotFoundException;
 import com.devinpharmacy.pharmacymanagement.exception.ServerErrorException;

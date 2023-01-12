@@ -1,6 +1,6 @@
-package com.devinpharmacy.pharmacymanagement.repository;
+package com.devinpharmacy.pharmacymanagement.dataprovider.repository;
 
-import com.devinpharmacy.pharmacymanagement.entity.FarmaciaEntity;
+import com.devinpharmacy.pharmacymanagement.dataprovider.entity.FarmaciaEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,17 +1,14 @@
 package com.devinpharmacy.pharmacymanagement.dataprovider.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.jetbrains.annotations.NotNull;
 
-@Entity (name = "usuario")
+@Entity
+@Table (name = "usuario")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -19,12 +16,21 @@ import org.jetbrains.annotations.NotNull;
 
 public class UsuarioEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name =  "id",nullable = false)
+    private Long id;
 
-    @NotNull
+
+    @Column
     private String email;
 
-    @NotNull
+
+    @Column
     private String senha;
+
+    public UsuarioEntity (String email, String senha){
+        this.email = email;
+        this.senha = senha;
+    }
+
 }

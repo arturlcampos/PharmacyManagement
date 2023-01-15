@@ -5,7 +5,7 @@ import com.devinpharmacy.pharmacymanagement.controller.dto.EnderecoResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/endereco")
+@RequestMapping(value = "/endereco")
 public class EnderecoController {
 
 

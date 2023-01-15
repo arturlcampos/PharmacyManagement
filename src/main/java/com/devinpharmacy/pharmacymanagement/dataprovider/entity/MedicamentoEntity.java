@@ -7,7 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.jetbrains.annotations.NotNull;
 
-@Entity (name = "medicamento")
+@Entity
+@Table (name="medicamento")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -17,7 +18,7 @@ public class MedicamentoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private long id;
+    private Long id;
 
     @NotNull
     @Column

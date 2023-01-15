@@ -13,4 +13,4 @@ public interface FeingClient {
 
     @PostMapping("{cep}/json")
     String buscaCep(@RequestBody() EnderecoResponse cep);
-}
+};

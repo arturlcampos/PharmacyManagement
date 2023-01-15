@@ -2,11 +2,21 @@ package com.devinpharmacy.pharmacymanagement.controller;
 
 import com.devinpharmacy.pharmacymanagement.controller.dto.FarmaciaRequest;
 import com.devinpharmacy.pharmacymanagement.controller.dto.FarmaciaResponse;
+import com.devinpharmacy.pharmacymanagement.dataprovider.repository.EnderecoRepository;
+import com.devinpharmacy.pharmacymanagement.dataprovider.repository.FarmaciaRepository;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping ("/farmacia")
+@RequestMapping (value = "/farmacia")
 public class FarmaciaController {
+
+    public final FarmaciaRepository farmaciaRepository;
+    private final EnderecoRepository enderecoRepository;
+
+    public FarmaciaController(FarmaciaRepository farmaciaRepository, EnderecoRepository enderecoRepository){
+        this.farmaciaRepository = farmaciaRepository;
+        this.enderecoRepository = enderecoRepository;
+    }
 
     @GetMapping()
     public FarmaciaResponse getFarmacia() {

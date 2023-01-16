@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient (url = "http://localhost:8080", name = "feignClient")
+@FeignClient (url = "http://viacep.com.br/ws/01001000/json/", name = "feign")
 public interface FeignCliente {
+
+
     @GetMapping("{cep}/json")
     String buscaCep(@PathVariable("cep") String cep);
 

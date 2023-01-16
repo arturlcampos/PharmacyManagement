@@ -45,6 +45,4 @@ public class GlobalHandler {
         return new ResponseEntity <ErrorResponse> (new ErrorResponse(LocalDateTime.now(),HttpStatus.INTERNAL_SERVER_ERROR.value(), e), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-
-
 }

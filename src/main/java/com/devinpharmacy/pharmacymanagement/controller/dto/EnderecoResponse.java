@@ -21,5 +21,4 @@ public class EnderecoResponse {
     private String latitude;
     private String longitude;
 
-
 }

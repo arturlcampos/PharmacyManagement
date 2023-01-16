@@ -63,24 +63,3 @@ public class UsuarioController {
 
 
 
-
-
-
-
-//    @GetMapping
-//    public UsuarioResponse encontrarUsuario() {
-//        List<UsuarioEntity> entityList = usuarioRepository.findAll();
-//        List<UsuarioResponse> responseList = new ArrayList<>();
-//        for (UsuarioEntity entity : entityList) {
-//            responseList.add(
-//                    new UsuarioResponse(entity.getEmail(), entity.getSenha())
-//            );
-//        }
-//        return new UsuarioResponse(
-//                "emailCriado",
-//                "sanhaCriada"
-//        );
-//
-//    }
-
-

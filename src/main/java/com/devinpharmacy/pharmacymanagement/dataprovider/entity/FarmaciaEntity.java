@@ -47,11 +47,7 @@ public class FarmaciaEntity {
     @Column
     private String celular;
 
-    public void setFarmacia(String nome_farmacia) {
-
-    }
-
-
+    public void setFarmacia(String nome_farmacia) {}
 
     public FarmaciaEntity (
             String razaoSocial,

@@ -17,6 +17,5 @@ public class FarmaciaRequest {
     private String email;
     private String telefone;
     private String celular;
-    private String id_endereco;
 
 }

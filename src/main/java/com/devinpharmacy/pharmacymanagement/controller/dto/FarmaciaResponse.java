@@ -17,6 +17,6 @@ public class FarmaciaResponse {
     private String  email;
     private String telefone;
     private String celular;
-    private String id_endereco;
+
 
 }

@@ -30,7 +30,7 @@ public class EnderecoEntity {
 
     @NotNull
     @Column
-    private Integer numero;
+    private String numero;
 
     @NotNull
     @Column
@@ -54,4 +54,29 @@ public class EnderecoEntity {
     @NotNull
     @Column
     private String longitude;
+
+    public void setEndereco(String nome_endereco) {}
+
+    public EnderecoEntity (
+            String cep,
+            String logradouro,
+            String numero,
+            String bairro,
+            String cidade,
+            String estado,
+            String complemento,
+            String latitude,
+            String longitude
+    )
+    {
+        this.cep = cep;
+        this.logradouro = logradouro;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.complemento = complemento;
+        this.latitude = latitude;
+        this.longitude = longitude;
+
+    }
 }

@@ -25,10 +25,11 @@ public class UsuarioController {
 
     @GetMapping
     public ResponseEntity encontraUsuario(){
-        usuarioRepository.save(new UsuarioEntity("ex1@email.com", "senha1"));
-        usuarioRepository.save(new UsuarioEntity("ex2@email.com", "senha2"));
-        usuarioRepository.save(new UsuarioEntity("ex3@email.com", "senha3"));
-
+        usuarioRepository.save(new UsuarioEntity(
+                "ex1@email.com",
+                "senha1"
+            )
+        );
 
         List<UsuarioEntity> entityList = usuarioRepository.findAll();
         List<UsuarioResponse> responseList = new ArrayList<>();
@@ -50,7 +51,11 @@ public class UsuarioController {
         )
     );
         return  new ResponseEntity(
-                new UsuarioResponse (entity.getEmail(), entity.getSenha()),
+                new UsuarioResponse (
+                        entity.getEmail(),
+                        entity.getSenha()
+                ),
+
                 HttpStatus.CREATED
         );
     }

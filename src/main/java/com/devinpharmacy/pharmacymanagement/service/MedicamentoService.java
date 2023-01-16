@@ -1,20 +1,25 @@
 package com.devinpharmacy.pharmacymanagement.service;
 
 import com.devinpharmacy.pharmacymanagement.dataprovider.entity.MedicamentoEntity;
-import com.devinpharmacy.pharmacymanagement.dataprovider.repository.MedicamentoRepository;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.stereotype.Service;
 
+
+@Getter
+@Setter
+@NoArgsConstructor
 @Service
 public class MedicamentoService {
 
-    private MedicamentoRepository repository;
+    private MedicamentoService repository;
 
-    public  MedicamentoService(MedicamentoRepository repository){
-
+    public  MedicamentoService(MedicamentoService repository){
         this.repository = repository;
     }
-    public void salvamedicamento(MedicamentoEntity medicamento) {
-        repository.save(medicamento);
+    public void save(MedicamentoEntity medicamentoEntity) {
+        repository.save(medicamentoEntity);
     }
 
 

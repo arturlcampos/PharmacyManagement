@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 public class MedicamentoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "medicamentoId", nullable = false)
     private Long id;
 
     @NotNull
@@ -40,7 +40,9 @@ public class MedicamentoEntity {
     @Column
     private String tipo_medicamento;
 
-    public void setMedicamento(String nomeMedicamento) {}
+    public void setMedicamento(String nome_medicamento) {
+
+    }
 
     public MedicamentoEntity (
             String nome_medicamento,
@@ -49,7 +51,8 @@ public class MedicamentoEntity {
             String descricao_medicamento,
             String preco_un_medicamento,
             String tipo_medicamento
-        ){
+        )
+    {
         this.nome_medicamento = nome_medicamento;
         this.nome_laboratorio = nome_laboratorio;
         this.dosagem_medicamento = dosagem_medicamento;
